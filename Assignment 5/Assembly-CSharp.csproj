@@ -61,19 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Arealight.cs" />
-    <Compile Include="Assets\CamController.cs" />
     <Compile Include="Assets\collider.cs" />
     <Compile Include="Assets\FixAngleCam.cs" />
-    <Compile Include="Assets\FixPositionCam.cs" />
     <Compile Include="Assets\Flashlight.cs" />
-    <Compile Include="Assets\havefirestick.cs" />
-    <Compile Include="Assets\Movement.cs" />
+    <Compile Include="Assets\menu.cs" />
     <Compile Include="Assets\onFire.cs" />
-    <Compile Include="Assets\Pickups.cs" />
-    <Compile Include="Assets\Room1Trigger.cs" />
-    <Compile Include="Assets\Room2Trigger.cs" />
-    <Compile Include="Assets\Room3Trigger.cs" />
     <Compile Include="Assets\Script\Bonfire.cs" />
+    <Compile Include="Assets\sticks.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
@@ -86,6 +80,7 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\warning.cs" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

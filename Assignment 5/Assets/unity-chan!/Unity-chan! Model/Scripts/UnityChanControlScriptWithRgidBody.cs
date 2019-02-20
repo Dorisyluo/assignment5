@@ -89,7 +89,7 @@ namespace UnityChan
 			} else if (v < -0.1) {
 				velocity *= backwardSpeed;	// 移動速度を掛ける
 			}
-		
+		/*
 			if (Input.GetButtonDown ("Jump")) {	// スペースキーを入力したら
 
 				//アニメーションのステートがLocomotionの最中のみジャンプできる
@@ -101,7 +101,7 @@ namespace UnityChan
 					}
 				}
 			}
-		
+		*/
 
 			// 上下のキー入力でキャラクターを移動させる
 			transform.localPosition += velocity * Time.fixedDeltaTime;
@@ -177,18 +177,19 @@ namespace UnityChan
 				}
 			}
 		}
-
+        
 		void OnGUI ()
 		{
 			GUI.Box (new Rect (Screen.width - 260, 10, 250, 150), "Interaction");
-			GUI.Label (new Rect (Screen.width - 245, 30, 250, 30), "Up/Down Arrow : Go Forwald/Go Back");
-			GUI.Label (new Rect (Screen.width - 245, 50, 250, 30), "Left/Right Arrow : Turn Left/Turn Right");
-			GUI.Label (new Rect (Screen.width - 245, 70, 250, 30), "Hit Space key while Running : Jump");
-			GUI.Label (new Rect (Screen.width - 245, 90, 250, 30), "Hit Spase key while Stopping : Rest");
-			GUI.Label (new Rect (Screen.width - 245, 110, 250, 30), "Left Control : Front Camera");
-			GUI.Label (new Rect (Screen.width - 245, 130, 250, 30), "Alt : LookAt Camera");
-		}
-
+			GUI.Label (new Rect (Screen.width - 245, 30, 250, 30), "W/S: Go Forwald/Go Back");
+			GUI.Label (new Rect (Screen.width - 245, 50, 250, 30), "A/D : Turn Left/Turn Right");
+//			GUI.Label (new Rect (Screen.width - 245, 70, 250, 30), "Hit Space key while Running : Jump");
+//			GUI.Label (new Rect (Screen.width - 245, 90, 250, 30), "Hit Spase key while Stopping : Rest");
+			GUI.Label (new Rect (Screen.width - 245, 70, 250, 30), "Mouse Left : Front Camera");
+			GUI.Label (new Rect (Screen.width - 245, 90, 250, 30), "Mouse Right : LookAt Camera");
+            GUI.Label (new Rect(Screen.width - 245, 110, 250, 30), "Press F to bonfire");
+        }
+        
 
 		// キャラクターのコライダーサイズのリセット関数
 		void resetCollider ()

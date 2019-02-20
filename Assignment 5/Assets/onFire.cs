@@ -4,21 +4,67 @@ using UnityEngine;
 
 public class onFire : MonoBehaviour
 {
-    public ParticleSystem fire;
-    public static bool firing = true;
-    // Start is called before the first frame update
-    void Start()
+    private int firestick = 0;
+    public GameObject block1;
+    public GameObject block2;
+
+    ParticleSystem system
     {
-        //fire.Stop();
+        get
+        {
+            if (_CachedSystem == null)
+                _CachedSystem = GetComponent<ParticleSystem>();
+            return _CachedSystem;
+        }
+    }
+    public ParticleSystem _CachedSystem;
+
+
+
+    public bool includeChildren = false;
+
+
+    int i = 0;
+
+    private void Start()
+    {
+        system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+    }
+    public void Update()
+    {
+
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Firestick"))
+        {
+            other.gameObject.SetActive(false);
+            firestick++;
+            sticks.s++;
+            block1.gameObject.SetActive(false);
+            block2.gameObject.SetActive(false);
+        }
+    }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bonfire"))
+        {
+            if(Input.GetKey(KeyCode.F) && firestick == 3)
+            {
+                Debug.Log("bonfire");
+                if (!_CachedSystem.isPlaying)
+                {
+                    Bonfire();
+                    firestick--;
+                    //sticks.s--;
+                }
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Bonfire()
     {
-        fire.Play(firing);
-    }
-    public static void setfire()
-    {
-        firing = true;
+        system.Play(true);
     }
 }

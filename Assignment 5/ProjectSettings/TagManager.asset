@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Firestick
+  - Bonfire
+  - Text
+  - Bonfire1
+  - Bonfire2
+  - Bonfire3
   layers:
   - Default
   - TransparentFX

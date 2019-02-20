@@ -16,10 +16,10 @@ public class Bonfire : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && havefirestick.havestick)
+        if (other.gameObject.CompareTag("Player"))
         {
-            havefirestick.used();
-            onFire.setfire();
+            //havefirestick.used();
+            //onFire.setfire();
             Debug.Log("bonfire touched");
         }
     }
